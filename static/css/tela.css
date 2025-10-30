@@ -1,0 +1,712 @@
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da container */
+.container-tela {
+    border: 1px solid #555;
+    /*background: linear-gradient(135deg, #404040 0%, #4a4a4a 100%);*/
+    background-image: url('imagem.jpg');
+    /* URL da imagem que você quer como fundo */
+    background-size: cover;
+    /* A imagem cobre toda a área do container */
+    background-position: center center;
+    /* Centraliza a imagem no container */
+    background-repeat: no-repeat;
+    /* A imagem não se repete */
+    overflow: visible;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    /* Ajuste a altura para garantir que o container tenha o tamanho desejado */
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 1;
+    /* Garante que o contêiner fique acima do vídeo */
+}
+
+
+#background-video {
+    position: fixed;
+    /* Mantém o vídeo fixo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Garante que o vídeo cubra todo o fundo sem distorcer */
+    z-index: -1;
+    /* Coloca o vídeo atrás do conteúdo, mas ainda visível */
+}
+
+
+#tela1 {
+    margin-top: 20px;
+}
+
+/* Estilo dos botões */
+.btn1 {
+    background: linear-gradient(135deg, #2e3338 0%, #3f4347 50%, #6b7075 100%);
+    color: rgb(242, 234, 10);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.btn1:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #004085 50%, #002752 100%);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-large2 {
+    width: 90px;
+    text-align: center;
+    font-size: 11px;
+}
+
+input[type="text1"] {
+    width: 95%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #FFF;
+}
+
+#seletor-categoria5 {
+    position: relative;
+    top: -60px !important;
+    left: 1200px !important;
+    cursor: pointer;
+}
+
+#input-categoria14 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    /* Ajuste a altura para garantir que o container tenha o tamanho desejado */
+    width: 600px;
+    background: transparent;
+    border: none;
+    position: relative;
+    left: 26% !important;
+    top: -80px !important;
+}
+
+#categoria14 {
+    position: relative;
+    height: 80px;
+    width: 600px;
+    left: 0% !important;
+    color: #FFF;
+    font-size: 60px;
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+    line-height: 30px;
+    /* Alinha verticalmente o texto no centro */
+    font-weight: bold;
+    /* Fonte em negrito */
+    /* Fonte chamativa (oswald) */
+    font-family: 'Oswald', sans-serif;  /* Fonte impactante e ousada */
+
+    /* Efeito de fundo bronze no texto */
+    background: linear-gradient(90deg, #2dccf0, #3a6ff5); /* Gradiente bronze e cobre */
+    background-clip: text;  /* Aplica o fundo somente no texto (funciona no Chrome/Safari) */
+    color: transparent;  /* Torna o texto transparente para o gradiente ser visível */
+    
+    /* Alternativa para sombra bronze nos textos não suportados */
+    text-shadow: 2px -2px 0px rgb(248, 249, 249);  /* Sombra azul */
+}
+
+/* Estilo das fotos dos atletas */
+
+#primeiro {
+    position: relative;
+    top: -60px !important;
+    left: 0px !important;
+    height: 180px;
+    /* Aumentando a altura para garantir visibilidade */
+    width: 100%;
+    /* Mantém a largura desejada */
+    background-color: transparent;
+    /* Cor de fundo */
+    border: none;
+    /* Cor da borda, agora com espessura */
+    border-radius: 10px;
+    /* Bordas arredondadas (opcional) */
+    color: #FFCC00;
+}
+
+
+#foto-atleta-container1 {
+    position: relative;
+    top: -10px !important;
+    left: 50px !important;
+    margin-top: 20px;
+}
+
+#foto-atleta1 {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #FFCC00;
+}
+
+#segundo {
+    position: relative;
+    top: -60px !important;
+    left: 0px !important;
+    height: 180px;
+    /* Aumentando a altura para garantir visibilidade */
+    width: 100%;
+    /* Mantém a largura desejada */
+    background-color: transparent;
+    /* Cor de fundo */
+    border: none;
+    /* Cor da borda, agora com espessura */
+    border-radius: 10px;
+    /* Bordas arredondadas (opcional) */
+    color: #afafac;
+
+    
+}
+
+#foto-atleta-container2 {
+    position: relative;
+    top: -10px !important;
+    left: 50px !important;
+    margin-top: 20px;
+}
+
+#foto-atleta2 {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #afafac;
+
+
+}
+
+#terceiro {
+    position: relative;
+    top: -60px !important;
+    left: 0px !important;
+    height: 180px;
+    /* Aumentando a altura para garantir visibilidade */
+    width: 100%;
+    /* Mantém a largura desejada */
+    background-color: transparent;
+    /* Cor de fundo */
+    border: none;
+    /* Cor da borda, agora com espessura */
+    border-radius: 10px;
+    /* Bordas arredondadas (opcional) */
+    color: #ed6111;
+}
+
+#foto-atleta-container3 {
+    position: relative;
+    top: -10px !important;
+    left: 50px !important;
+    margin-top: 20px;
+}
+
+#foto-atleta3 {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ed6111;
+
+}
+
+#pocicao1.input-text1 {
+    position: relative;
+    top: -300px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 30% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #FFCC00;
+    /* Cor do texto do campo */
+    height: 50px;
+    /* Aumentando a altura do campo */
+    width: 200px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 30px;
+    /* Ajuste do tamanho da fonte */
+    font-weight: bold;
+    /* Fonte em negrito */
+
+    /* Efeito de fundo dourado no texto */
+    background: linear-gradient(90deg, #FFD700, #FFCC00);
+    /* Gradiente dourado */
+    background-clip: text;
+    /* Aplica o fundo somente no texto (funciona no Chrome/Safari) */
+    color: transparent;
+    /* Torna o texto transparente para o gradiente ser visível */
+
+    /* Alternativa para sombra dourada nos textos não suportados */
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.8);
+    /* Sombra dourada */
+
+}
+
+
+
+
+#nome.input-text1 {
+    position: relative;
+    top: -120px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 45% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #FFCC00;
+    /* Cor do texto do campo */
+    height: 100px;
+    /* Aumentando a altura do campo */
+    width: 800px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 56px;
+    /* Ajuste do tamanho da fonte */
+    font-weight: bold;
+    /* Fonte em negrito */
+
+     /* Fonte chamativa (oswald) */
+    font-family: 'Oswald', sans-serif;  /* Fonte impactante e ousada */
+
+    /* Efeito de fundo dourado no texto */
+    background: linear-gradient(90deg, #FFD700, #f9cc18);
+    /* Gradiente dourado */
+    background-clip: text;
+    /* Aplica o fundo somente no texto (funciona no Chrome/Safari) */
+    color: transparent;
+    /* Torna o texto transparente para o gradiente ser visível */
+
+    /* Alternativa para sombra dourada nos textos não suportados */
+    text-shadow: 2px 0px 16px rgba(255, 217, 0, 0.781);
+    /* Sombra dourada */
+
+}
+
+#fase1.input-text1 {
+    position: relative;
+    top: -370px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 70% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #FFF;
+    /* Cor do texto do campo */
+    height: 50px;
+    /* Aumentando a altura do campo */
+    width: 500px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 24px;
+    /* Ajuste do tamanho da fonte */
+
+}
+
+#nota12.input-text1 {
+    position: relative;
+    top: -500px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 85% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #FFCC00;
+    /* Cor do texto do campo */
+    height: 250px;
+    /* Aumentando a altura do campo */
+    width: 350px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 160px;
+    /* Ajuste do tamanho da fonte */
+
+    /* Fonte chamativa (oswald) */
+    font-family: 'Oswald', sans-serif;  /* Fonte impactante e ousada */
+
+    /* Efeito de fundo dourado no texto */
+    background: linear-gradient(90deg, #FFD700, #f9cc18);
+    /* Gradiente dourado */
+    background-clip: text;
+    /* Aplica o fundo somente no texto (funciona no Chrome/Safari) */
+    color: transparent;
+    /* Torna o texto transparente para o gradiente ser visível */
+
+    /* Alternativa para sombra dourada nos textos não suportados */
+    text-shadow: 2px 2px 16px rgba(255, 217, 0, 0.781);
+    /* Sombra dourada */
+
+}
+
+#pocicao12 {
+    position: relative;
+    top: -300px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 30% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #afafac;
+    /* Cor do texto do campo */
+    height: 50px;
+    /* Aumentando a altura do campo */
+    width: 200px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 30px;
+    /* Ajuste do tamanho da fonte */
+    font-weight: bold;
+    /* Fonte em negrito */
+
+     /* Efeito de fundo branco e cinza no texto */
+    background: linear-gradient(90deg, #FFFFFF, #D3D3D3);
+    /* Gradiente branco e cinza claro */
+    background-clip: text;
+    /* Aplica o fundo somente no texto (funciona no Chrome/Safari) */
+    color: transparent;
+    /* Torna o texto transparente para o gradiente ser visível */
+
+    /* Alternativa para sombra cinza nos textos não suportados */
+    text-shadow: 2px 2px 6px rgba(203, 203, 203, 0.8);
+    /* Sombra cinza */
+
+}
+
+#nome2 {
+    position: relative;
+    top: -120px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 45% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #afafac;
+    /* Cor do texto do campo */
+    height: 100px;
+    /* Aumentando a altura do campo */
+    width: 800px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 56px;
+    /* Ajuste do tamanho da fonte */
+    font-weight: bold;
+    /* Fonte em negrito */
+
+     /* Fonte chamativa (oswald) */
+    font-family: 'Oswald', sans-serif;  /* Fonte impactante e ousada */
+
+    /* Efeito de fundo branco e cinza no texto */
+    background: linear-gradient(90deg, #FFFFFF, #D3D3D3);
+    /* Gradiente branco e cinza claro */
+    background-clip: text;
+    /* Aplica o fundo somente no texto (funciona no Chrome/Safari) */
+    color: transparent;
+    /* Torna o texto transparente para o gradiente ser visível */
+
+    /* Alternativa para sombra cinza nos textos não suportados */
+    text-shadow: 2px 0px 16px rgba(203, 203, 203, 0.8);
+    /* Sombra cinza */
+
+}
+
+#fase12 {
+    position: relative;
+    top: -370px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 70% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #FFF;
+    /* Cor do texto do campo */
+    height: 50px;
+    /* Aumentando a altura do campo */
+    width: 500px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 24px;
+    /* Ajuste do tamanho da fonte */
+
+}
+
+#nota122 {
+    position: relative;
+    top: -500px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 85% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #afafac;
+    /* Cor do texto do campo */
+    height: 250px;
+    /* Aumentando a altura do campo */
+    width: 350px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 160px;
+    /* Ajuste do tamanho da fonte */
+
+    /* Fonte chamativa (oswald) */
+    font-family: 'Oswald', sans-serif;  /* Fonte impactante e ousada */
+
+     /* Efeito de fundo branco e cinza no texto */
+    background: linear-gradient(90deg, #FFFFFF, #D3D3D3);
+    /* Gradiente branco e cinza claro */
+    background-clip: text;
+    /* Aplica o fundo somente no texto (funciona no Chrome/Safari) */
+    color: transparent;
+    /* Torna o texto transparente para o gradiente ser visível */
+
+    /* Alternativa para sombra cinza nos textos não suportados */
+    text-shadow: 2px 2px 16px rgba(203, 203, 203, 0.8);
+    /* Sombra cinza */
+
+}
+
+#pocicao13 {
+    position: relative;
+    top: -300px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 30% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #ed6111;
+    /* Cor do texto do campo */
+    height: 50px;
+    /* Aumentando a altura do campo */
+    width: 200px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 30px;
+    /* Ajuste do tamanho da fonte */
+    font-weight: bold;
+    /* Fonte em negrito */
+
+    /* Efeito de fundo bronze no texto */
+    background: linear-gradient(90deg, #f3902e, #f37f12); /* Gradiente bronze e cobre */
+    background-clip: text;  /* Aplica o fundo somente no texto (funciona no Chrome/Safari) */
+    color: transparent;  /* Torna o texto transparente para o gradiente ser visível */
+    
+    /* Alternativa para sombra bronze nos textos não suportados */
+    text-shadow: 2px 2px 6px rgba(246, 128, 10, 0.995);  /* Sombra bronze */
+
+
+}
+
+#nome3 {
+    position: relative;
+    top: -120px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 45% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #ed6111;
+    /* Cor do texto do campo */
+    height: 100px;
+    /* Aumentando a altura do campo */
+    width: 800px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 56px;
+    /* Ajuste do tamanho da fonte */
+    font-weight: bold;
+    /* Fonte em negrito */
+
+    /* Fonte chamativa (oswald) */
+    font-family: 'Oswald', sans-serif;  /* Fonte impactante e ousada */
+    
+    /* Fonte Impact (forte e chamativa) */
+    /*font-family: 'Impact', sans-serif;*/  
+    
+    /* Fonte Lobster (cursiva e estilizada) */
+    /* font-family: 'Lobster', sans-serif; */
+    
+    /* Fonte Anton (moderna e ousada) */
+    /* font-family: 'Anton', sans-serif; */
+
+    /* Efeito de fundo bronze no texto */
+    background: linear-gradient(90deg, #f3902e, #f37f12); /* Gradiente bronze e cobre */
+    background-clip: text;  /* Aplica o fundo somente no texto (funciona no Chrome/Safari) */
+    color: transparent;  /* Torna o texto transparente para o gradiente ser visível */
+    
+    /* Alternativa para sombra bronze nos textos não suportados */
+    text-shadow: 2px 2px 16px rgba(246, 128, 10, 0.995);  /* Sombra bronze */
+
+}
+
+#fase13 {
+    position: relative;
+    top: -370px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 70% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #fff;
+    /* Cor do texto do campo */
+    height: 50px;
+    /* Aumentando a altura do campo */
+    width: 500px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 24px;
+    /* Ajuste do tamanho da fonte */
+
+}
+
+#nota123 {
+    position: relative;
+    top: -500px !important;
+    /* Ajuste o deslocamento para o topo, sem necessidade de !important */
+    left: 85% !important;
+    /* Posiciona o input no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    color: #ed6111;
+    /* Cor do texto do campo */
+    height: 250px;
+    /* Aumentando a altura do campo */
+    width: 350px;
+    /* Mantém a largura desejada */
+    border: none;
+    /* Borda dourada */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: transparent;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Espaçamento interno para o texto não encostar nas bordas */
+    font-size: 160px;
+    /* Ajuste do tamanho da fonte */
+
+    /* Fonte chamativa (oswald) */
+    font-family: 'Oswald', sans-serif;  /* Fonte impactante e ousada */
+    
+
+    /* Efeito de fundo bronze no texto */
+    background: linear-gradient(90deg, #f3902e, #f37f12); /* Gradiente bronze e cobre */
+    background-clip: text;  /* Aplica o fundo somente no texto (funciona no Chrome/Safari) */
+    color: transparent;  /* Torna o texto transparente para o gradiente ser visível */
+    
+    /* Alternativa para sombra bronze nos textos não suportados */
+    text-shadow: 2px 2px 16px rgba(246, 128, 10, 0.995);  /* Sombra bronze */
+
+}
+
+hr#linha1,
+hr#linha2 {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    top: -70px !important;
+    position: relative;
+}

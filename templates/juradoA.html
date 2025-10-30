@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="jurados.css">
+  <title>Arbitro</title>
+  <link rel="icon" href="27.png" type="image/png">
+
+  <link rel="icon" href="{{ url_for('static', filename='imagens/27.png') }}" type="image/png" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/jurados.css') }}" />
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>🏆 ARBITRO</h1>
+          <p>Sistema de Competição de Capoeira</p>
+        </div>
+        <div class="lang-buttons">
+          <button id="pt" class="lang-btn active" data-lang="pt">
+            <img src="{{ url_for('static', filename='imagens/br.png') }}" alt="Português">
+            <span class="lang-text">PT</span>
+          </button>
+
+          <button id="en" class="lang-btn" data-lang="en">
+            <img src="{{ url_for('static', filename='imagens/us.png') }}" alt="English">
+            <span class="lang-text">EN</span>
+          </button>
+
+          <button id="es" class="lang-btn" data-lang="es">
+            <img src="{{ url_for('static', filename='imagens/es.png') }}" alt="Español">
+            <span class="lang-text">ES</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="avaliacao-box">
+      <input type="text" id="arbitro" class="input-text" placeholder="Arbitro" readonly />
+      <!--<input id="jurado" placeholder="" readonly />-->
+
+      <!-- Campo de Foto do Atleta -->
+      <div id="foto-atleta-container" style="display:none;">
+        <label id="nome-atleta1" for="nome-atleta1">Atleta</label>
+        <img id="foto-atleta" src="" alt="Foto do Atleta">
+      </div>
+
+      <div class="input-container1">
+        <label for="fase">Fase:</label>
+        <input type="text" id="fase" class="input-text" placeholder="fase" readonly />
+      </div>
+
+      <div class="input-container2">
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" class="input-text" placeholder="Categoria" readonly />
+      </div>
+
+      <div class="input-container3">
+        <label for="ritmo">Jogo:</label>
+        <input type="text" id="ritmo" class="input-text" placeholder="Ritmo" readonly />
+      </div>
+
+      <label for="atleta">Selecionar Atleta</label>
+      <select id="atleta">
+        <option value="">Selecione um atleta</option>
+      </select>
+
+      <div class="label-centralizada">
+        <label id="nota1" for="nota">Nota</label>
+        <select id="nota">
+          <!-- opções serão geradas automaticamente pelo JS -->
+        </select>
+      </div>
+
+      <button id="enviar">Enviar Nota</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container2">
+      <p>&copy; 2025 Sistema de Competição Voando Alto Capoeira - Desenvolvido para gerenciar classificações</p>
+    </div>
+  </footer>
+
+  <script src="translate-juradoA.js"></script>
+  <script type="module" src="juradoA.js"></script>
+  <script type="module" src="firebase.js"></script>
+
+  <script type="module" src="{{ url_for('static', filename='js/firebase.js') }}"></script>
+  <script type="module" src="{{ url_for('static', filename='js/juradoA.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/translate-juradoA.js') }}"></script>
+
+
+
+</body>
+
+</html>

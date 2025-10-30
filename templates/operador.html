@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador</title>
+    <link rel="icon" href="27.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Impact&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="admin25.css">
+    <link rel="stylesheet" href="operadorplanilha1.css">
+    <link rel="stylesheet" href="tela.css">
+    <link rel="stylesheet" href="tela1.css">
+    <link rel="stylesheet" href="sorteio.css">
+
+    <link rel="icon" href="{{ url_for('static', filename='imagens/27.png') }}" type="image/png"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin25.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/operadorplanilha1.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tela.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tela1.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sorteio.css') }}"/>
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container3">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🏆 OPERADOR</h1>
+                    <p>Sistema de Competição de Capoeira</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container24" id="header3">
+            <div class="container25" id="header1">
+                <button id="enviar-jurado1" class="btn btn-large1">Enviar para Jurado</button>
+                <button id="planilha1" class="btn btn-large1">Planilha Notas</button>
+                <button id="tela2" class="btn btn-large1">Tela Classificatória</button>
+                <button id="tela1" class="btn btn-large1">Tela Final</button>
+                <button id="sorteio1" class="btn btn-large1">Sorteio</button>
+
+
+            </div>
+        </div>
+
+
+        <!-- mandar atleta para jurado -->
+
+        <div class="container7" id="operadorj1" style="display: none;">
+            <div class="selection-panel">
+                <h3>Enviar Dados para Jurados</h3>
+
+                <div class="selection-group">
+                    <label for="ritmo-selection">Ritmo:</label>
+                    <select id="ritmo-selection">
+                        <option value="1º Jogo">1º Jogo</option>
+                        <option value="2º Jogo">2º Jogo</option>
+                        <option value="3º Jogo">3º Jogo</option>
+                    </select>
+                </div>
+
+                <div class="selection-group">
+                    <label for="categoria-selection">Categoria:</label>
+                    <select id="categoria-selection">
+                        <option value="">Selecione uma categoria</option>
+                    </select>
+                </div>
+
+                <div class="selection-group">
+                    <label for="atleta-selection">Atletas (Ctrl + clique para múltiplos):</label>
+                    <select id="atleta-selection" multiple size="8">
+                        <option value="">Carregando atletas...</option>
+                    </select>
+                </div>
+
+                <div id="atleta-jogo">
+                    <table id="atleta-jogo1" border="1" cellspacing="0" cellpadding="5">
+                        <thead>
+                            <tr>
+                                <th id="fase">Fase</th>
+                                <th id="jogo1">Jogo 1</th>
+                                <th id="jogo2">Jogo 2</th>
+                                <th id="jogo3">Jogo 3</th>
+                                <th id="atleta4">Atleta</th>
+                                <th id="categoria4">Categoria</th>   
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="jogotd" colspan="6" class="empty-message">Nenhum dado encontrado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="selection-group1">
+                    <!--<label>Fases:</label>-->
+                    <div class="fase-buttons">
+                        <button id="btn-classificatoria" class="btn btn-fase active"
+                            data-fase="classificatória">Classificatória</button>
+                        <button id="btn-oitavas" class="btn btn-fase" data-fase="oitavas">Oitavas</button>
+                        <button id="btn-quartas" class="btn btn-fase" data-fase="quartas">Quartas</button>
+                        <button id="btn-semifinal" class="btn btn-fase" data-fase="semifinal">Semi-final</button>
+                        <button id="btn-final" class="btn btn-fase" data-fase="final">Final</button>
+                    </div>
+                </div>
+
+                <div class="selection-group1">
+                    <div class="fase-atual-display">
+                        <span id="fase-atual-nome" class="fase-nome">Classificatória</span>
+                    </div>
+                </div>
+
+                <div class="selection-group1">
+                    <button id="enviar-jurados" class="btn btn-large">📤 Enviar para Jurado</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- CONTAINER PRINCIPAL -->
+        <div id="container-tabelas" class="tabela-container1" style="display: none;">
+
+            <!-- TABELA PRINCIPAL -->
+            <div id="tabela-principal" class="tabela-view">
+                <div class="container1">
+                    <h2>
+                        Jogo: <span id="ritmo-atual">Selecionar</span>
+                        <select id="seletor-ritmo" class="select-estilizado">
+                            <option value="">Selecionar</option>
+                            <option value="1º Jogo">1º Jogo</option>
+                            <option value="2º Jogo">2º Jogo</option>
+                            <option value="3º Jogo">3º Jogo</option>
+                        </select>
+                    </h2>
+
+                    <div class="botoes-acoes" style="margin-bottom:10px;">
+                        <div>
+                            <label for="seletor-categoria" class="label-categoria">Categoria:</label>
+                            <select id="seletor-categoria" class="select-estilizado2">
+                                <option value="">Todas</option>
+                            </select>
+
+                            <!-- Seletor de Grupo de Fases -->
+                            <label for="seletor-fase-grupo">Fase:</label>
+                            <select id="seletor-fase-grupo">
+                                <option>Selecionar</option>
+                                <option value="classificatória">Classificatória</option>
+                                <option value="oitavas">Oitavas</option>
+                                <option value="quartas">Quartas</option>
+                                <option value="semifinal">Semi-final</option>
+                                <option value="final">Final</option>
+                            </select>
+
+                            <button id="PDF0" onclick="BaixarPDF()">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-tabela">
+                    <input type="text" class="arbitroA" id="arbitroA" class="input-text" placeholder="Arbitro"
+                        readonly />
+                    <input type="text" class="arbitroB" id="arbitroB" class="input-text" placeholder="Arbitro"
+                        readonly />
+                    <input type="text" class="arbitroC" id="arbitroC" class="input-text" placeholder="Arbitro"
+                        readonly />
+
+                    <table id="tabela-principal1" border="1" cellspacing="0" cellpadding="5">
+                        <thead>
+                            <tr>
+                                <th id="sel">Sel.</th>
+                                <th id="atleta">Atleta</th>
+                                <th id="categoria">Categoria</th>
+                                <th id="notaA">Nota</th>
+                                <th id="notaB">Nota</th>
+                                <th id="notaC">Nota</th>
+                                <th id="media">Média</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="7" class="empty-message">Nenhum dado encontrado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="botoes-acoes1" style="margin-top:10px;">
+                    <button id="MediaTotal" onclick="MediaTotal()">Média Total</button>
+                    <button id="excluir" onclick="excluirLinhasSelecionadas()">Excluir Linhas Selecionadas</button>
+                </div>
+            </div>
+
+            <!-- TABELA SECUNDÁRIA -->
+            <div id="tabela-secundaria" class="tabela-view" style="display:none;">
+                <div class="container1">
+                    <h2 id="h2-1">
+                        Nota de Atletas
+                    </h2>
+
+                    <div class="botoes-acoes" style="margin-bottom:10px;">
+                        <div>
+                            <label for="seletor-categoria1" class="label-categoria1">Categoria:</label>
+                            <select id="seletor-categoria1" class="select-estilizado3">
+                                <option value="">Todas</option>
+                            </select>
+
+                            <!-- Seletor de Grupo de Fases -->
+                            <label for="seletor-fase-grupo1">Fase:</label>
+                            <select id="seletor-fase-grupo1">
+                                <option>Selecionar</option>
+                                <option value="classificatória">Classificatória</option>
+                                <option value="oitavas">Oitavas</option>
+                                <option value="quartas">Quartas</option>
+                                <option value="semifinal">Semi-final</option>
+                                <option value="final">Final</option>
+                            </select>
+
+                            <button id="PDF1" onclick="baixarPDF1()">Download PDF</button>
+                            <button id="salvar2" onclick="salvar2()">Salvar</button>
+                            <button id="terceiro1" onclick="terceiro()">Terçeiro</button>
+                            <button id="segundo1" onclick="segundo()">Segundo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-tabela1">
+                    <table id="tabela-secundaria1" border="1" cellspacing="0" cellpadding="5">
+                        <thead>
+                            <tr>
+                                <th id="sel">Sel.</th>
+                                <th id="foto3">Foto</th>
+                                <th id="posicao">Posição</th>
+                                <th id="atleta1">Atleta</th>
+                                <th id="categoria1">Categoria</th>
+                                <th id="1º Jogo">1º Jogo</th>
+                                <th id="2º Jogo">2º Jogo</th>
+                                <th id="3º Jogo">3º Jogo</th>
+                                <th id="notaFinal">Nota Final</th>
+                                <th id="classificado">Proxima Fase</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="10" class="empty-message">Nenhum dado encontrado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="statusMessage"
+                    style="display:none; padding: 10px; margin-top: 20px; font-size: 16px; font-weight: bold;"></div>
+
+                <div class="botoes-acoes" style="margin-top:10px;">
+                    <button id="voltarParaTabelaPrincipal" onclick="voltarParaTabelaPrincipal()">Voltar</button>
+                    <button id="oitavas" onclick="oitavas()">Oitavas</button>
+                    <button id="quartas" onclick="quartas()">Quartas</button>
+                    <button id="semifinal" onclick="semifinal()">Semi-Final</button>
+                    <button id="final" onclick="final()">Final</button>
+                    <button id="enviar1" onclick="enviar1()">Enviar</button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- tela -->
+
+        <div class="container-tela" id="container-tela" style="display:none;">
+
+
+            <button id="voltar3" class="btn1 btn-large2">Voltar</button>
+            <button id="terceiro4" class="btn1 btn-large2">Terçeiro</button>
+            <button id="segundo4" class="btn1 btn-large2">Segundo</button>
+
+
+            <div id="tela">
+
+
+                <div id="input-categoria">
+                    <select id="seletor-categoria5" class="select-estilizado3">
+                        <option value="">Categoria</option>
+                    </select>
+                </div>
+
+                <div id="input-categoria14">
+                    <input type="text1" id="categoria14" placeholder="categoria" readonly />
+                </div>
+
+
+                <div id="primeiro" style="display: none;">
+
+                    <div id="foto-atleta-container1">
+                        <img id="foto-atleta1" src="" alt="">
+                    </div>
+
+                    <div id="input-nome">
+                        <input type="text1" id="nome" class="input-text1" placeholder="Nome" readonly />
+                    </div>
+
+                    <div id="input-posicao">
+                        <input type="text1" id="pocicao1" class="input-text1" placeholder="Primeiro" readonly />
+                    </div>
+
+                    <div id="input-fase">
+                        <input type="text1" id="fase1" class="input-text1" placeholder="fase" readonly />
+                    </div>
+
+                    <div id="input-nota">
+                        <input type="text1" id="nota12" class="input-text1" placeholder="nota" readonly />
+                    </div>
+                </div>
+
+                <hr id="linha1"> <!-- Linha divisória -->
+
+                <div id="segundo" style="display: none;">
+
+                    <div id="foto-atleta-container2">
+                        <img id="foto-atleta2" src="" alt="">
+                    </div>
+
+                    <div id="input-nome2">
+                        <input type="text1" id="nome2" class="input-text" placeholder="Nome" readonly />
+                    </div>
+
+                    <div id="input-posicao2">
+                        <input type="text1" id="pocicao12" class="input-text" placeholder="Segundo" readonly />
+                    </div>
+
+                    <div id="input-fase2">
+                        <input type="text1" id="fase12" class="input-text" placeholder="fase" readonly />
+                    </div>
+
+                    <div id="input-nota2">
+                        <input type="text1" id="nota122" class="input-text" placeholder="nota" readonly />
+                    </div>
+                </div>
+
+                <hr id="linha2"> <!-- Linha divisória -->
+
+                <div id="terceiro" style="display: none;">
+
+                    <div id="foto-atleta-container3">
+                        <img id="foto-atleta3" src="" alt="">
+                    </div>
+
+                    <div id="input-nome3">
+                        <input type="text1" id="nome3" class="input-text" placeholder="Nome" readonly />
+                    </div>
+
+                    <div id="input-posicao3">
+                        <input type="text1" id="pocicao13" class="input-text" placeholder="Terçeiro" readonly />
+                    </div>
+
+                    <div id="input-fase3">
+                        <input type="text1" id="fase13" class="input-text" placeholder="fase" readonly />
+                    </div>
+
+                    <div id="input-nota3">
+                        <input type="text1" id="nota123" class="input-text" placeholder="nota" readonly />
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Vídeo como fundo com id -->
+            <video id="background-video" autoplay muted loop>
+                <source src="video6.mp4" type="video/mp4"> <!-- Substitua pelo caminho do seu vídeo -->
+                <source src="{{ url_for('static', filename='videos/video6.mp4') }}" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+
+        </div>
+
+        <!-- tela Classificatoria -->
+
+        <!-- TABELA DUPLICADA -->
+        <div id="tabela-secundaria2" class="tabela-view" style="display:none;">
+            <div class="container1">
+                <h2 id="h2-1">Nota de Atletas</h2>
+
+                <div class="botoes-acoes" style="margin-bottom:10px;">
+                    <div>
+                        <label for="seletor-categoria1" class="label-categoria1">Categoria:</label>
+                        <select id="seletor-categoria1" class="select-estilizado3">
+                            <option value="">Todas</option>
+                        </select>
+
+                        <label for="seletor-fase-grupo1">Fase:</label>
+                        <select id="seletor-fase-grupo1">
+                            <option>Selecionar</option>
+                            <option value="classificatória">Classificatória</option>
+                            <option value="oitavas">Oitavas</option>
+                            <option value="quartas">Quartas</option>
+                            <option value="semifinal">Semi-final</option>
+                            <option value="final">Final</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-tabela1">
+                <table id="tabela-secundaria1" border="1" cellspacing="0" cellpadding="5">
+                    <thead>
+                        <tr>
+                            <th id="foto3">Foto</th>
+                            <th id="posicao">Posição</th>
+                            <th id="atleta1">Atleta</th>
+                            <th id="categoria1">Categoria</th>
+                            <th id="1º Jogo">1º Jogo</th>
+                            <th id="2º Jogo">2º Jogo</th>
+                            <th id="3º Jogo">3º Jogo</th>
+                            <th id="notaFinal">Nota Final</th>
+                            <th id="classificado">Proxima Fase</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="9" class="empty-message">Nenhum dado encontrado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="statusMessage"
+                style="display:none; padding: 10px; margin-top: 20px; font-size: 16px; font-weight: bold;"></div>
+
+            <div class="botoes-acoes" style="margin-top:10px;">
+                <button id="voltar4" onclick="voltar4()">Voltar</button>
+            </div>
+        </div>
+
+        <!-- sorteio -->
+
+        <div class="sorteio" id="sorteio" style="display:none;">
+            <h2>Sorteio Automático</h2>
+
+            <label id="fase5">Fase:</label>
+            <select id="seletor-fase5">
+                <option value="">Selecione a fase</option>
+            </select>
+
+            <label id="categoria5">Categoria:</label>
+            <select id="seletor-categoria9">
+                <option value="">Selecione a categoria</option>
+            </select>
+
+            <button id="btn-sortear">Sortear</button>
+
+            <h3>Resultado do Sorteio:</h3>
+            <table border="1" id="tabela-sorteio">
+                <thead>
+                    <tr>
+                        <th>Atleta 1</th>
+                        <th>Foto</th>
+                        <th></th>
+                        <th>Atleta 2</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <label id="fase5">Fase:</label>
+            <select id="seletor-fase6">
+                <option value="">Selecione a fase</option>
+            </select>
+
+            <label id="categoria5">Categoria:</label>
+            <select id="seletor-categoria8">
+                <option value="">Selecione a categoria</option>
+            </select>
+
+            <button id="btn-sortear1">Sortear</button>
+
+            <h3>Resultado do Sorteio:</h3>
+            <table border="1" id="tabela-sorteio1">
+                <thead>
+                    <tr>
+                        <th>Atleta 1</th>
+                        <th>Foto</th>
+                        <th></th>
+                        <th>Atleta 2</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+
+            <button id="PDF3" onclick="baixarPDF3()">Download PDF</button>
+
+        </div>
+
+    </main>
+
+    <script type="module" src="operador25.js"></script>
+    <script type="module" src="operadorTela.js"></script>
+    <script type="module" src="fase.js"></script>
+    <script type="module" src="tela.js"></script>
+    <script type="module" src="tela2.js"></script>
+    <script type="module" src="tela1.js"></script>
+    <script type="module" src="sorteio.js"></script>
+    <script type="module" src="terceiroLugar.js"></script>
+    <script type="module" src="PrimeiroSegundo.js"></script>
+    <script type="module" src="admin.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="firebase1.js"></script>
+    <script type="module" src="operadorJurados.js"></script>
+    <script type="module" src="operadorJurado1.js"></script>
+    <script type="module" src="operadorplanilha01.js"></script>
+    <script type="module" src="operadorplanilha02.js"></script>
+    <script src="operadorBotao.js"></script>
+
+    <script type="module" src="{{ url_for('static', filename='js/operador25.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/operadorTela.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/fase.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/tela.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/tela2.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/tela1.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/sorteio.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/terceiroLugar.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/PrimeiroSegundo.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/firebase1.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/admin.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/firebase.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/operadorJurados.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/operadorJurado1.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/operadorplanilha01.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/operadorplanilha02.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/operadorBotao.js') }}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.12/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,813 @@
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2d2d2d 0%, #404040 100%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid #ff6b35;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Garantir que o header está no topo */
+            padding: 0.5rem 0;
+            
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo h1 {
+            color: #ff6b35;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo p {
+            color: #fff;
+        }
+
+        /* Adicionar espaço no conteúdo abaixo para não cobrir o conteúdo */
+        
+.main {
+    padding: 1rem 0 !important;
+    min-height: calc(100vh - 120px);
+}
+
+/* Estilo geral para o painel */
+.main {
+  background-color: #4f4b4b; /* Cor de fundo */
+  padding: 20px !important;
+  font-family: 'Arial', sans-serif;
+  color: #f1b32d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh !important;
+  position: relative;
+}
+
+.container23 {
+  border-radius: 10px;
+  position: relative;  /* Torna o container24 o ponto de referência para o container25 */
+  padding: 20px; /* Adiciona um pouco de espaço interno */
+  height: 330px;  /* Ajuste a altura para garantir que o container tenha o tamanho desejado */
+  width: 250px;  /* Ajuste a largura do container conforme necessário */
+  background: linear-gradient(135deg, #404040 0%, #4a4a4a 100%);
+  padding: 1rem;
+  border: 1px solid #555;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  overflow: visible;
+  top: -30px !important;
+  left: -560px !important;
+}
+
+.container24 {
+  border-radius: 10px;
+  position: fixed;  /* Fixando o container na tela */
+  top: 130px;  /* Ajuste a posição do container na tela (distância do topo) */
+  left: 50px; /* Ajuste a posição do container na tela (distância da esquerda) */
+  padding: 20px; /* Adiciona um pouco de espaço interno */
+  height: 380px;  /* Altura do container */
+  width: 250px;  /* Largura do container */
+  background: linear-gradient(135deg, #404040 0%, #4a4a4a 100%);
+  border: 1px solid #555;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  overflow: visible;
+  z-index: 100; /* Garante que o container fique acima de outros elementos */
+}
+
+
+.container25 {
+  display: flex;
+  flex-direction: column; /* Alinha os botões verticalmente */
+  gap: 0.3rem; /* Distancia os botões */
+  position: absolute; /* O container25 ficará dentro de container24 */
+  top: 20px; /* Ajuste a posição dentro do container24 */
+  left: 20px; /* Ajuste a posição dentro do container24 */
+  right: 20px; /* Ajuste o alinhamento à direita */
+}
+
+
+.btn-large1 {
+  display: flex;  /* Usando Flexbox para facilitar a centralização */
+  justify-content: center;  /* Centraliza o texto horizontalmente */
+  align-items: center;  /* Centraliza o texto verticalmente */
+  margin: 0 auto;
+  width: 60%;  /* Largura do botão */
+  max-width: 300px;  /* Largura máxima do botão */
+  padding: 0.5rem 6rem;  /* Ajuste do padding para aumentar o tamanho vertical e horizontal */
+  font-size: 0.8rem;  /* Aumenta o tamanho da fonte */
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  color: #eef2f8;
+  /*background: linear-gradient(135deg, #002752 0%, #004085 50%, #0056b3 100%);*/
+  background: linear-gradient(135deg, #2e3338 0%, #3f4347 50%, #6b7075 100%);
+  text-align: center;  /* Garantir que o texto esteja centralizado */
+  white-space: nowrap;  /* Garante que o texto não quebre para a linha seguinte */
+  overflow: hidden; /* Impede que o texto ultrapasse os limites do botão */
+  text-overflow: ellipsis; /* Coloca "..." caso o texto seja muito longo */
+}
+
+.btn-large1:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 50%, #002752 100%);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+#container-cadastrar-usuario.container3,
+#adic-categoria {
+    position: relative;
+    border: 1px solid #555;
+    background: linear-gradient(135deg, #404040 0%, #4a4a4a 100%);
+    overflow: visible;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    height: 330px;  /* Ajuste a altura para garantir que o container tenha o tamanho desejado */
+    width: 250px;
+    padding: 20px;
+    top: -50px !important;
+}
+
+#container-cadastra-arbitro {
+  position: relative;
+    border: 1px solid #555;
+    background: linear-gradient(135deg, #404040 0%, #4a4a4a 100%);
+    overflow: visible;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    height: 380px;  /* Ajuste a altura para garantir que o container tenha o tamanho desejado */
+    width: 250px;
+    padding: 20px;
+    top: -50px !important;
+}
+
+h4#cadastra1 {
+    color: #fff;
+}
+
+label {
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Estilo dos campos de entrada (input) */
+input[type="text"], input[type="password"] {
+    width: 95%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Estilo do checkbox para mostrar senha */
+.show-password-container {
+    display: flex;
+    align-items: center;
+}
+
+.show-password-container input {
+    margin-right: 8px;
+}
+
+#adic-atleta  {
+    position: relative;
+    border: 1px solid #555;
+    background: linear-gradient(135deg, #404040 0%, #4a4a4a 100%);
+    overflow: visible;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    height: 330px;  /* Ajuste a altura para garantir que o container tenha o tamanho desejado */
+    width: 550px;
+    padding: 20px;
+    top: -50px !important;
+}
+
+#nome-categoria {
+    height: 30px;  /* Ajuste a altura para garantir que o container tenha o tamanho desejado */
+    width: 235px;
+
+}
+
+input#numero-atleta,
+input#nome-atleta {
+    height: 30px;  /* Ajuste a altura para garantir que o container tenha o tamanho desejado */
+    width: 235px;
+    border-radius: 10px;
+}
+
+/* Foto Adicionar foto do Atleta */
+.foto-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  margin: 12px 0 6px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+
+.foto-container img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3f51b5;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  width: 180px;       /* Tamanho fixo */
+  height: 180px;      /* Tamanho fixo */
+  margin-left: 5px;
+  margin-top: 5px;
+  position: relative;
+  top: -250px !important;   /* ajuste vertical */
+  left: 310px !important;   /* ajuste horizontal */
+}
+
+
+/* Coluna de botões à direita da imagem */
+.foto-container .botoes-coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+button#add-categoria-btn.btn.btn-large1 {
+    top: -180px !important;
+    left: center !important;
+    position: relative;
+}
+
+  #botaoFoto {
+  position: relative;
+  top: -50px !important;      /* ajuste vertical */
+  left: 145px !important;       /* ajuste horizontal */
+  background: transparent;
+  color: rgb(236, 170, 38);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+#botaoFoto:hover {
+  color: #4d7cf3;
+  background-color: transparent;
+}
+
+#botaoFoto:focus {
+  background-color: transparent;
+  color: #2365ea;
+}
+
+.tabela-container1 {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #404040 0%, #4a4a4a 100%);
+  border-radius: 8px;
+  border: 1px solid #555;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: -60px !important;
+  left: 200px !important;
+}
+
+
+/*excluir */
+
+#exc-categoria,
+#exc-atleta {
+    position: relative;
+    border: 1px solid #555;
+    background: linear-gradient(135deg, #404040 0%, #4a4a4a 100%);
+    overflow: visible;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    height: 330px;  /* Ajuste a altura para garantir que o container tenha o tamanho desejado */
+    width: 350px;
+    padding: 20px;
+    top: -60px !important;
+    left: -80px !important;
+}
+
+#lista-categorias {
+  position: relative;
+  top: 10px !important;
+  left: 10px !important;
+  height: 200px;
+  width: 200px;
+}
+
+#lista-categorias-2 {
+  position: relative;
+  top: 10px !important;
+  left: 10px !important;
+  border-radius: 5px;
+  
+}
+
+#lista-atletas {
+  position: relative;
+  top: 30px !important;
+  left: 10px !important;
+  height: 180px;
+  width: 200px;
+}
+
+#excluir-categoria-btn {
+  position: relative;
+  top: 40px !important;
+  left: 10px !important;
+}
+
+#excluir-atleta-btn {
+  position: relative;
+  top: 40px !important;
+  left: 10px !important;
+}
+
+/* enviar para operador */
+
+label[for="atleta-operador"],
+label[for="categoria-operador"],
+label[for="foto-atleta"],
+select#categoria-operador,
+select#atleta-operador,
+h4#operador1,
+#foto-atleta {
+  position: relative;
+  display: block;
+  margin-bottom: 2px;
+  margin-left: 20px; 
+  width: 400px;
+  padding: 8px 8px;
+  border-radius: 6px;
+  color: #d9950d;
+  top: 10px;
+  left: 10px;
+}
+
+select#atleta-operador,
+label[for="atleta-operador"] {
+  top: 10px !important;
+  left: 440px !important;
+} 
+
+h4#operador1 {
+  top: 10px !important;
+  left: 0px !important;
+} 
+
+select#categoria-operador,
+label[for="categoria-operador"] {
+  position: relative;
+  top: -373px !important;
+  left: 0px !important;
+} 
+
+label[for="foto-atleta"] {
+  position: relative;
+  top: -320px !important;
+  left: 150px !important;
+}
+
+/*h4#operador1 {
+  color: #fff;
+}*/
+
+#foto-atleta {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  display: inline-block;
+  left: 130px !important;
+  top: -320px !important;
+}
+
+#atleta-operador {
+  width: 100%;
+  height: 340px;
+  padding: 20px 20px;   /* altura reduzida: 8px (vertical), 20px (horizontal) */
+  border-radius: 8px;
+  background: #1c1c3a;
+  color: #ffffff;
+  border: 1px solid #3f51b5;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.5);
+  transition: all 0.3s ease;
+
+  margin-bottom: 30px; /* separação maior do próximo select */
+}
+
+#categoria-operador {
+  width: 100%;
+  padding: 9px 20px;   /* altura reduzida: 8px (vertical), 20px (horizontal) */
+  border-radius: 8px;
+  background: #1c1c3a;
+  color: #ffffff;
+  border: 1px solid #3f51b5;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.5);
+  transition: all 0.3s ease;
+
+  margin-bottom: 10px;
+}
+
+#atleta-operador:focus,
+#categoria-operador:focus {
+  border-color: #00c3ff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.7);
+}
+
+#operadorj2 {
+    position: relative;
+    border: 1px solid #555;
+    background: linear-gradient(135deg, #404040 0%, #4a4a4a 100%);
+    overflow: visible;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    height: 540px;  /* Ajuste a altura para garantir que o container tenha o tamanho desejado */
+    width: 920px;
+    padding: 20px;
+    top: 30px !important;
+    left: 120px !important;
+}
+
+#enviar-operador-btn {
+  position: relative;
+  top: -225px !important;
+  left: -220px !important;
+}
+
+/* enviar para jurado */
+
+/*#operadorj1 {
+    position: relative;
+    overflow: visible;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    height: 540px;  /* Ajuste a altura para garantir que o container tenha o tamanho desejado *//*
+    width: 920px;
+    padding: 20px;
+    top: -60px !important;
+    left: 120px !important;
+}*/
+
+.selection-panel {
+    border: 1px solid #555;
+    background: linear-gradient(135deg, #404040 0%, #4a4a4a 100%);
+    overflow: visible;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    height: 550px;  /* Ajuste a altura para garantir que o container tenha o tamanho desejado */
+    width: 1020px;
+    padding: 20px;
+    position: relative;
+    top: 30px !important;
+    left: 100px !important;
+}
+
+.selection-panel h3 {
+    color: #ff6b35;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    border-bottom: 2px solid #ff6b35;
+    padding-bottom: 0.3rem;
+}
+
+#ritmo-selection {
+  width: 20%;
+}
+
+#categoria-selection {
+  width: 20%;
+}
+
+
+#enviar-jurados.btn.btn-large {
+  position: relative;
+  left: -332px !important;
+  top: -550px !important;
+  width: 30%;
+}
+
+
+
+
+.selection-group1 {
+    margin-bottom: 1rem;
+    position: relative;
+    top: -300px !important;
+    left: 0px !important;
+}
+
+.selection-group label {
+    display: block;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.selection-group select {
+    width: 40%;
+    padding: 0.5rem;
+    border: 2px solid #555;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    background: #2d2d2d;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.selection-group select:hover {
+    border-color: #007bff;
+}
+
+.selection-group select:focus {
+    outline: none;
+    border-color: #ff6b35;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.selection-group select[multiple] {
+    height: 120px;
+    resize: none;
+    overflow-y: auto;
+}
+
+#atleta-selection{
+  width: 250px;
+  height: 440px;
+  padding: 20px 20px;   /* altura reduzida: 8px (vertical), 20px (horizontal) */
+  border-radius: 8px;
+  background: #1c1c3a;
+  color: #ffffff;
+  border: 1px solid #3f51b5;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.5);
+  transition: all 0.3s ease;
+  margin-bottom: 30px; /* separação maior do próximo select */
+  position: relative;
+  top: -150px !important;
+  left: 340px !important;
+  overflow-y: auto; /* Adiciona o rolamento vertical */
+  overflow-x: hidden; /* Desativa o rolamento horizontal, caso não queira */
+  border-collapse: collapse; /* Garante uma boa aparência das bordas */
+}
+
+label[for="atleta-selection"] {
+  position: relative;
+  top: -150px !important;
+  left: 350px !important;
+}
+
+.fase-buttons {
+    width: 32%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.3rem;
+    
+}
+
+
+#fase-atual-nome.fase-nome {
+  width: center;
+}
+
+.fase-atual-display,
+.fase-buttons {
+  position: relative;
+  top: -560px !important;
+
+}
+
+
+/* btn Fase */
+.btn-fase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    font-size: 0.7rem;
+    /*font-weight: bold;  /* Usando 'font-weight' para negrito */
+    background: linear-gradient(135deg, #6c757d 0%, #545b62 100%);
+    color: white;
+    border: 1px solid #545b62;
+    transition: all 0.3s ease;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    top: 10px !important;
+    left: 10px !important;
+    width: 80px;
+    height: 25px;
+    margin: 2px;
+    
+}
+
+.btn-fase:hover {
+    background: linear-gradient(135deg, #545b62 0%, #3d4142 100%);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.204);
+    transform: translateY(-2px);
+}
+
+.btn-fase.active {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    color: #000;
+    
+}
+
+.btn-fase.active:hover {
+    border-color: #ff6b35;
+    box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+    transform: scale(1.05);
+}
+
+.fase-atual-display {
+    width: 32%;
+    background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+    border: 2px solid #ff6b35;
+    border-radius: 6px;
+    padding: 0.15rem 0.4rem; /* ainda menor */
+    text-align: center;
+    margin: 0.2rem 0;
+}
+
+.fase-nome {
+    color: #ff6b35;
+    font-size: 0.75rem;       /* menor ainda */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    line-height: 1.1;         /* compacta a altura da linha */
+}
+
+.btn-large {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  max-width: 300px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  color: #eef2f8;
+  background: linear-gradient(135deg, #002752 0%, #004085 50%, #0056b3 100%);
+  text-align: center;
+}
+
+.btn-large:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 50%, #002752 100%);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn.btn-info {
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  border: none;
+  color: #eef2f8;
+  background: linear-gradient(135deg, #002752 0%, #004085 50%, #0056b3 100%);
+  text-align: center;
+  margin-right: 10px; /* Distância entre os botões */
+}
+
+.btn.btn-info:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #004085 50%, #002752 100%);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+#enviar-jurados {
+  position: relative;
+  top: -340px !important;
+  left: -210px !important;
+}
+
+/* Estilo para a imagem do atleta */
+.foto-atleta {
+  width: 40px;        /* Ajuste o tamanho conforme necessário */
+  height: 40px;       /* Ajuste o tamanho conforme necessário */
+  border-radius: 50%; /* Isso torna a imagem circular */
+  object-fit: cover;  /* Garante que a imagem cubra a área sem distorção */
+}
+
+#atleta-jogo {
+  width: 370px;
+  height: 440px;
+  position: relative;
+  top: -620px !important;
+  left: 610px !important;
+  overflow-y: auto; /* Adiciona o rolamento vertical */
+  overflow-x: hidden; /* Desativa o rolamento horizontal, caso não queira */
+  border-collapse: collapse; /* Garante uma boa aparência das bordas */
+
+}
+
+#atleta-jogo1 {
+  width: 360px;
+  height: auto;
+  position: relative;
+  top: 0px !important;
+  left: 0px !important;
+  text-align: center;
+  font: 0 sans-serif;
+  overflow-y: auto; /* Adiciona o rolamento vertical */
+  overflow-x: hidden; /* Desativa o rolamento horizontal, caso não queira */
+  border-collapse: collapse; /* Garante uma boa aparência das bordas */
+
+}
+
+th#jogo1, #jogo2, #jogo3 {
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  font-size: 9px;
+  width: 8%;
+}
+
+th#atleta4 {
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+}
+
+th#categoria4 {
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  width: 30%;
+}
+
+th#fase {
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  width: 20%;
+}
+
+tr#jogotr {
+  background-color: #004085;
+}
+
+td#jogotd {
+  background-color: #004085;
+  color: #ff6b35;
+  text-align: center;
+  font-size: 8px;
+}
+
+#atleta-jogo1 td {
+    font-size: 10px; /* Tamanho da fonte das células */
+    text-align: center;
+    background-color: #0056b3;
+    color: #fff;
+    font: 100;
+}
+
+td {
+  text-align: center;
+  font-size: 8px;
+}
+
+tbody {
+  background-color: #004085;
+  color: #fff;
+}
+ 
+input.jogo-checkbox {
+  background-color: transparent;
+}
