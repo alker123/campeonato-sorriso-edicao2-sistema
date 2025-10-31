@@ -69,7 +69,7 @@ import { ref, onValue, remove, push, get, set } from "https://www.gstatic.com/fi
 
     async function carregarCategorias() {
   try {
-    const categoriasRef = ref(db1, "Categoria");
+    const categoriasRef = ref(db3, "Categoria");
     const snapshot = await get(categoriasRef);
 
     if (snapshot.exists()) {
