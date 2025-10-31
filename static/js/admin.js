@@ -1,7 +1,7 @@
 
 
 import { db4, db3 } from "./firebase.js";
-import { ref, onValue, getDatabase, remove, push, get, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+import { ref, onValue, remove, push, get, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 
 
 // Adicionar atleta e categoria
